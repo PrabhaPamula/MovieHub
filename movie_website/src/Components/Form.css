@@ -1,0 +1,43 @@
+.SignuploginForm{
+    background-color: rgb(61, 60, 60);;
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+.SignuploginForm h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.SignuploginForm h3{
+    margin-top: 15px;
+}
+.SignuploginForm form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px 30px;
+}
+.SignuploginForm input {
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    margin: 10px;
+}
+.SignuploginForm label {
+    align-items: flex-start;
+    margin: 0;
+}
+.SignuploginForm button {
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.response{
+    background-color: black;
+    color: white;
+}

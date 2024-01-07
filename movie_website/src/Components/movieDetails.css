@@ -1,0 +1,145 @@
+.movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 70px;
+}
+.backimg {
+    width: 80%;
+}
+.backimg .backdropimg {
+    width: 100%;
+    height: 400px;
+    object-fit:cover;
+}
+.movie_details{
+    width: 75%;
+   
+}
+.details_left{
+    display: flex;
+}
+.details_left .mposter_container{
+    width: 175px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: -170px;
+}
+.mposter{
+    width: 100%;
+    border-radius: 10px;
+}
+.beside-poster {
+    display: flex;
+    justify-content: space-between;
+
+}
+.details_left .mtitle{
+    text-align: left;
+    margin-left: 15px;
+    padding: 10px;
+    
+}
+.nname{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.watchlist-btn button{
+    background-color: green;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.general{
+    padding-top: 15px;
+    display: flex;
+    gap: 50px;
+}
+.mgenrecontainer {
+    text-align: left;
+    margin-top: 25px;
+}
+.mgenre {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.overviewtext{
+    text-align: left;
+    margin-top: 25px;
+}
+.synopsisText{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.movielinks{
+    text-align: left;
+    margin-top: 25px;
+    display: flex;
+    width: 75%;
+    gap: 10px;
+}
+
+.moviedesctitle{
+    display: flex;
+    margin-top: 15px;
+    font-size: 16px;
+    align-items: start;
+}
+.movielinks .btnhome{
+    background-color: orangered;
+    padding: 10px;
+}
+.movielinks .btnimdb{
+    background-color: orange;
+    padding: 10px;
+}
+
+.movie_additional {
+    width: 75%;
+    margin-top: 15px;
+}
+
+.productions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+
+.movie__productionComapany {
+    width: 200px;
+    margin: 2rem;
+}
+
+.productionCompanyImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+@media screen and (max-width:700px) {
+    .productions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mgenrecontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .mgenre{
+        margin: 10px 0;
+    }
+}
