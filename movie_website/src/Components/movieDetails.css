@@ -47,7 +47,7 @@
 }
 
 .watchlist-btn button{
-    background-color: green;
+    background-color: #ff4545;
     padding: 15px;
     border-radius: 5px;
     margin-left: 15px;
@@ -141,5 +141,43 @@
     }
     .mgenre{
         margin: 10px 0;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .details_left{
+        display: flex;
+        flex-direction: column;
+    }
+    .details_left .mposter_container{
+        display: none;
+    }
+    .beside-poster{
+        display: flex;
+        flex-direction: column;
+    }
+    .details_left .mtitle{
+        text-align: left;
+        margin-left: 0;
+        padding: 0;
+        
+    }
+    .nname{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .watchlist-btn button{
+        background-color: #ff4545;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+    .general{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 0px;
     }
 }

@@ -123,11 +123,11 @@ export const Header = ({onSearch}) => {
             </div>
 
               <div className={`headerRight  ${sidebar ? "nav-links-sidebar" : "nav-links"}`} onClick={() => setSidebar(false)}>
-                <Link to="/" style={{textDecoration: "none"}}><span>Home</span></Link>
-                <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
-                <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
-                <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
-                <button onClick={handleWatchListClick}><span>Watchlist</span></button>
+                <Link to="/" className="nav1" style={{textDecoration: "none"}}><span>Home</span></Link>
+                <Link to="/movies/popular" className="nav1" style={{textDecoration: "none"}}><span>Popular</span></Link>
+                <Link to="/movies/top_rated" className="nav1" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
+                <Link to="/movies/upcoming" className="nav1" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
+                <button onClick={handleWatchListClick} className="nav1"><span>Watchlist</span></button>
                 {
                   auth ?
                   <button className='header-btn' onClick={handleLogout}><span>Logout</span></button>

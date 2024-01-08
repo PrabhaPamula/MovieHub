@@ -19,7 +19,7 @@
   text-align: center;
 }
 .logo span {
-  color: red;
+  color: #ff4545;
   font-weight: 100;
 }
 
@@ -45,11 +45,14 @@
 }
 
 .headerRight .header-btn {
-  background-color: green;
+  background-color: #ff4545;
   padding: 7px 15px;
   border-radius: 5px;
 }
-.headerRight Link::after{
+.headerRight .nav1:hover {
+  color: #ff4545;
+}
+/* .headerRight Link::after{
   content: '';
   width: 0%;
   height: 2px;
@@ -60,7 +63,7 @@
   }
   .headerRight Link:hover::after{
   width: 100%;
-  }
+  } */
 
 
 /* Styles for the suggestions list */
@@ -96,7 +99,7 @@
 }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:1000px) {
   .nav-links{
       display: none;
   }
@@ -129,6 +132,7 @@
       z-index: 1001;
   }
 }
+
 @media screen and (max-width:450px) {
   
   .search{
@@ -145,7 +149,15 @@
 }
 
 @media screen and (max-width:380px) {
-  .logo{
-    display: none;
+  .headerLeft {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .header .search {
+    padding: 4px 7px;
+  }
+  .suggestion{
+    font-size: 13px;
   }
 }
