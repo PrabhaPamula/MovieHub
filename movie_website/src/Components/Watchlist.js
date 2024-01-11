@@ -52,6 +52,11 @@ export const Watchlist = () => {
       const movieDetails = await Promise.all(movieDetailsPromises);
       return movieDetails.filter(movie => movie !== null);
     };
+
+
+    const handleonDelete = (deletedMovieId) => {
+      setWatchlist((prevMovies) => prevMovies.filter(movie => movie.id !== deletedMovieId));
+    };
     
 
   return (
@@ -59,7 +64,7 @@ export const Watchlist = () => {
     <div className='watch-list-conatiner mt-4 mb-20'>
         {
             watchlist.map((movie) => (
-                <WatchListCard key={movie.id} {...movie}/>
+                <WatchListCard key={movie.id} {...movie} onDelete={handleonDelete}/>
             ))
         }
     </div>

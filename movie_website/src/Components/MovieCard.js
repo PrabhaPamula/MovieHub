@@ -19,7 +19,8 @@ export const MovieCard = ({id,title,poster_path,overview,vote_average}) => {
     <>
     <Link to={`/movie/${id}`} style={{textDecoration:"none", color:"white"}}>
       <div className='movie-card'>
-          <img src={IMG_API+poster_path} alt={title}/>
+          {/* <img src={IMG_API+poster_path} alt={title}/> */}
+          <img src={poster_path ? IMG_API+poster_path : "images/default_image.jpg"} alt={title}/>
         
         <div className='movie-info'>
           <h3>{title}</h3>

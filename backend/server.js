@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: ["http://localhost:3000"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "DELETE"],
     credentials: true
 }));
 app.use(cookieParser());
@@ -84,6 +84,21 @@ app.post("/addToWatchlist", verifyUser, (req,res) => {
         })
     })
 
+})
+
+app.delete("/WatchlistMovieDelete", verifyUser, (req,res) => {
+    const userId = req.user.userId;
+    console.log(userId)
+    const movieId = req.body.id;
+    console.log(movieId);
+
+    const sql = "DELETE FROM watchlist WHERE uid = ? AND movieid = ?";
+    db.query(sql, [userId,movieId], (err,result) => {
+        if(err) {
+            return res.json({Error: "Error deleting movie from watchlist in server"});
+        }
+        return res.json({Status: "Success"});
+    })
 })
 
 app.get("/", verifyUser, (req,res) => {

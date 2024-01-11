@@ -61,7 +61,7 @@ export const MovieDetail = () => {
     <>
       <div className="movie">
             <div className="backimg">
-                <img className="backdropimg" src={`https://image.tmdb.org/t/p/w1280${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
+                <img className="backdropimg" src={`https://image.tmdb.org/t/p/w1280${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} /> 
             </div>
             <div className="movie_details">
                 <div className="details_left">
