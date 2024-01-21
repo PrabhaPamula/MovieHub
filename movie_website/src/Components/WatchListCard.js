@@ -1,6 +1,5 @@
 import React from 'react'
 import "./WatchListCard.css"
-import { RiDeleteBinLine } from "react-icons/ri";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import Axios from 'axios';
 

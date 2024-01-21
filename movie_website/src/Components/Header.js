@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { MdMenu } from "react-icons/md";
 import { MdOutlineClose } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 import './Header.css'
 import config from './config';
 import Axios from 'axios'
@@ -13,6 +15,23 @@ export const Header = ({onSearch}) => {
   const navigate = useNavigate();
   const [suggestions, setSuggestions] = useState([]);
   const [sidebar, setSidebar] = useState(false)
+  const [theme, setTheme] = useState("dark-theme");
+
+  const toggleTheme = () => {
+    if(theme === "dark-theme") {
+      setTheme("light-theme");
+      isDark(false);
+    } else {
+      setTheme("dark-theme");
+      isDark(true);
+    }
+  }
+
+  useEffect(() => {
+    document.body.className = theme;
+  },[theme]);
+
+  const [dark,isDark] = useState(true)
 
   const [auth, setAuth] = useState(false);
   Axios.defaults.withCredentials = true;
@@ -120,14 +139,19 @@ export const Header = ({onSearch}) => {
                   </div>
                   
                 </form>
+                
+
+
             </div>
 
               <div className={`headerRight  ${sidebar ? "nav-links-sidebar" : "nav-links"}`} onClick={() => setSidebar(false)}>
-                <Link to="/" className="nav1" style={{textDecoration: "none"}}><span>Home</span></Link>
                 <Link to="/movies/popular" className="nav1" style={{textDecoration: "none"}}><span>Popular</span></Link>
                 <Link to="/movies/top_rated" className="nav1" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
                 <Link to="/movies/upcoming" className="nav1" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
                 <button onClick={handleWatchListClick} className="nav1"><span>Watchlist</span></button>
+                <div className='change-theme' onClick={() => toggleTheme()}>
+                  {dark ? <MdOutlineDarkMode/> : <MdOutlineLightMode />}
+                </div>
                 {
                   auth ?
                   <button className='header-btn' onClick={handleLogout}><span>Logout</span></button>

@@ -22,12 +22,12 @@ export const SearchList = ({searchQuery}) => {
       })
       .then((data) => {
         setMovieList(data.results);
-        setError(null); // Reset error state on successful fetch
+        setError(null); 
       })
       .catch((error) => {
         console.error("Error fetching data", error);
         setMovieList([]);
-        setError("Error fetching data. Please try again."); // Set an error message
+        setError("Error fetching data. Please try again."); 
       });
   };
   

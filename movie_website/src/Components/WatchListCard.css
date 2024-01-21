@@ -4,11 +4,10 @@
     transition: 0.3s;
 }
 .watchlist-component:hover {
-    /* transform: translateY(-5px); */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .watchlist-card {
-    background-color: rgb(61, 60, 60);
+    background-color: var(--card2-bg-color);
     display: flex;
     padding: 20px;
     border-radius: 5px;
@@ -31,7 +30,6 @@
 .watchlist-details h1 {
     font-size: 27px;
     font-weight: bold;
-    /* color: #6488EA; */
 }
 .watchlist-details .para-rating{
     padding: 5px 0px;
@@ -42,7 +40,6 @@
 }
 
 .watchtag {
-    /* background-color: rgb(49, 47, 47); */
     padding: 3px 5px;
     border-radius: 5px;
 }
@@ -90,7 +87,6 @@
         /* color: #6488EA; */
     }
     .watchlist-details p{
-        /* text-align: left; */
         margin: 0;
         max-width: 250px;
     }

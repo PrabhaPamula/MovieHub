@@ -1,14 +1,16 @@
+
 .movie-card {
     position: relative;
     width: 250px;
     margin: 12px;
-    background-color: rgb(61, 60, 60);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg-color);
+    color: var(--font-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.5s;
 }
 .movie-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .movie-card img {
@@ -29,7 +31,8 @@
     background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: 10px 10px 5px #e5e4e2;
     text-align: left;
     color: black;
     padding: 10px;
@@ -44,7 +47,7 @@
 }
 
 .tag {
-    background-color: rgb(49, 47, 47);
+    background-color: var(--tag-bg-color);
     padding: 3px 5px;
     border-radius: 5px;
 }

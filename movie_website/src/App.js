@@ -8,7 +8,6 @@ import { SearchList } from './Components/SearchList';
 import { useState } from 'react';
 import { Login } from './Components/Login';
 import { Signup } from './Components/Signup';
-import { WatchListCard } from './Components/WatchListCard';
 import { Watchlist } from './Components/Watchlist';
 
 function App() {

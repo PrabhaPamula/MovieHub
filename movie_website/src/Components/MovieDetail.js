@@ -120,7 +120,7 @@ export const MovieDetail = () => {
             </div>
 
             <div className='movie_additional'>
-                <h3 className="moviedesctitle">Production companies</h3>
+                <h3 className="moviedesctitle">Production Companies</h3>
                 <div className="productions">
                     {
                         currentMovieDetail && currentMovieDetail.production_companies && currentMovieDetail.production_companies.map(company => (

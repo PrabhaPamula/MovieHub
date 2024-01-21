@@ -65,7 +65,7 @@
 }
 .mgenre {
     padding: 10px 20px;
-    border: 2px solid white;
+    border: 1.5px solid var(--font-color);
     border-radius: 20px;
     margin-right: 10px;
 }
@@ -80,7 +80,7 @@
 }
 .movielinks{
     text-align: left;
-    margin-top: 25px;
+    margin-top: 15px;
     display: flex;
     width: 75%;
     gap: 10px;
@@ -90,6 +90,7 @@
     display: flex;
     margin-top: 15px;
     font-size: 16px;
+    font-weight: bold;
     align-items: start;
 }
 .movielinks .btnhome{
